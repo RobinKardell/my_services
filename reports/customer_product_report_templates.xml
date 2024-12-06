@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_customer_product_xlsx">
+        <t t-call="report_xlsx.common">
+            <t t-set="doc_ids" t-value="doc_ids"/>
+            <t t-set="doc_model" t-value="doc_model"/>
+            <t t-set="docs" t-value="docs"/>
+        </t>
+    </template>
+
+    <report
+        id="action_customer_product_xlsx"
+        model="res.partner"
+        string="Customer Product Report"
+        report_type="xlsx"
+        name="my_service.report_customer_product_xlsx"
+        file="my_service.report_customer_product_xlsx"
+        print_report_name="'Customer_Product_Report_' + object.name"
+    />
+</odoo>
